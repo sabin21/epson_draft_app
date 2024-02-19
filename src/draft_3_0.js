@@ -162,15 +162,15 @@ const heroSwiper = new Swiper('.hero-wrap',{
     clickable: true,
   },
   navigation: {
-    nextEl: ".next",
-    prevEl: ".prev",
+    nextEl: ".hero-nav-next",
+    prevEl: ".hero-nav-prev",
   },
   direction: "vertical",
   on:{
-    init: function(){
-      // heroSketch.objsTl;
-      console.log(heroSketch);
-    },
+    // init: function(){
+    //   // heroSketch.objsTl;
+    //   console.log(heroSketch);
+    // },
     activeIndexChange:function(){
       if(this.realIndex === 0){
         heroTl.to(heroSketch.objWrap1.rotation, {y: 0, duration:1});
