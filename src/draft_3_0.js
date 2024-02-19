@@ -102,9 +102,10 @@ export default class Sketch {
     this.gltf.load(model1, (gltf)=>{
         this.objWrap1.add(gltf.scene);
         this.obj1 = gltf.scene.children[0];
-        this.obj1.castShadow = true; 
-        this.obj1.receiveShadow = true; 
+        this.objWrap1.castShadow = true; 
+        this.objWrap1.receiveShadow = true; 
     });
+
     this.scene.add(this.objGroup1);
     this.objGroup1.scale.set(0.2, 0.2, 0.2);
     this.objGroup1.position.set(0, -0.08, 0);
@@ -133,12 +134,11 @@ export default class Sketch {
     this.renderer.render(this.scene, this.camera);
   }
   
-
-introAni(){
-  const objsTl = gsap.timeline({paused:true});
-  objsTl
-  .to(this.objGroup1.position, {y: 1, duration:0.5}); 
-} 
+  introAni(){
+    const objsTl = gsap.timeline({paused:true});
+    objsTl
+    .to(this.objGroup1.position, {y: 1, duration:0.5}); 
+  } 
 
 } //--- Sketch
 

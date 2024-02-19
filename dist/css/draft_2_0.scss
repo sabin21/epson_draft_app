@@ -41,7 +41,7 @@
 .section {
   position: relative; width: 100%; padding: 150px 0 50px 0;
   .con-wrap{
-    position: relative; width: 100%; max-width: 1524px; margin: auto;
+    display: block; position: relative; width: 100%; max-width: 1524px; margin: auto;
     .full-img {
       max-width: 100%;
     }
